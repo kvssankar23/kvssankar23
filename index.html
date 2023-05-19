@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- <button onclick="openInSafari()">Open in Safari</button> -->
+    if (userAgent.match(/instagram/i)) {
+  var shouldOpenInBrowser = confirm("Open in Safari or Chrome for a better experience?");
+  if (shouldOpenInBrowser) {
+    var isIOS = /iPad|iPhone|iPod/.test(userAgent) && !window.MSStream;
+    if (isIOS) {
+      window.location.href = 'https://www.example.com';  // Replace with your website URL
+    } else {
+      window.open('https://www.example.com');  // Replace with your website URL
+    }
+  }
+}
+  </body>
+</html>
